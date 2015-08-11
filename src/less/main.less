@@ -1,0 +1,115 @@
+@import "includes/bootstrap";
+@highlight: #fff;
+@background: #FFF;
+@links: #fff;
+html,
+body {
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: normal;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hnContainer {
+    background-image: url('/images/Mockup-Generated-by-Dunnnk (1)-min.jpg');
+    background-size: cover;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+
+    background-attachment: fixed !important;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    
+    .bgOverlay {
+        background: #333;
+        opacity: 0.5;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    .inner-container {
+        position: relative;
+        z-index: 10;
+    }
+    
+    .navbar-header {
+        float: inherit;
+    }
+    .navbar-brand {
+        padding: 2px;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 15px;
+        img {
+            display: inline-block;
+        }
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .navbar-link {
+        margin: 15px;
+        float: right;
+        line-height: 50px;
+        height: 50px;
+        &:hover {
+            text-decoration: none;
+            //border: 1px solid #fff;
+            color: #fff;
+        }
+    }
+    @media (max-width: 350px) {
+        .navbar-header {
+            width: 100%;
+        }
+        .navbar-brand {
+            width: 100%;
+            text-align: center;
+        }
+        .navbar-link {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding-left: 25px;
+        }
+    }
+}
+
+h1 {
+    color: @highlight;
+    text-align: center;
+}
+
+a {
+    color: @links;
+}
+
+.description {
+    margin: 3em auto;
+}
+
+.button-holder {
+    text-align: center;
+}
+
+// .cta {
+//     .btn;
+//     .btn-lg;
+//     .button-variant(@background;
+//     @highlight;
+//     @highlight);
+// }
