@@ -13,6 +13,13 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    a {
+        color: @links;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
 }
 
 .hnContainer {
@@ -23,12 +30,10 @@ body {
     padding: 30px;
     position: relative;
     overflow: hidden;
-
     background-attachment: fixed !important;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover !important;
-    
     .bgOverlay {
         background: #333;
         opacity: 0.5;
@@ -39,12 +44,6 @@ body {
         top: 0;
         z-index: 2;
     }
-
-    .inner-container {
-        position: relative;
-        z-index: 10;
-    }
-    
     .navbar-header {
         float: inherit;
     }
@@ -66,13 +65,33 @@ body {
         float: right;
         line-height: 50px;
         height: 50px;
+        @media (max-width: 400px) {
+            width: 100%;
+            text-align: center;
+        }
         &:hover {
             text-decoration: none;
             //border: 1px solid #fff;
             color: #fff;
         }
     }
+    @media (max-width: 450px) {
+        .navbar-link {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding-left: 25px;
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+    }
     @media (max-width: 350px) {
+        .navbar {
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-bottom: 0;
+        }
         .navbar-header {
             width: 100%;
         }
@@ -85,31 +104,124 @@ body {
             margin: 0 auto;
             text-align: center;
             padding-left: 25px;
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+    }
+    .inner-container {
+        position: relative;
+        z-index: 10;
+        width: 85%;
+        margin: 0 auto;
+        @media (max-width: 320px) {
+            .col-sm-6 {
+                padding-left: 0px;
+            }
+        }
+        .hnDesc {
+            h1 {
+                color: @highlight;
+                text-align: center;
+                margin: 5px 0;
+            }
+            a {
+                color: @links;
+                &:hover {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+            .description {
+                margin: 0 auto;
+                //padding: 10% 0;
+                height: 544px;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                .labelDesc {
+                    padding: 5px;
+                    font-size: 18px;
+                }
+                .appStoreIcon {
+                    width: 250px;
+                }
+            }
+            @media (max-width: 760px) {
+                .description {
+                    height: inherit;
+                    padding: 10px 0 30px 0;
+                }
+            }
+        }
+        .hnImg {
+            .sliderImg {
+                margin: 0 auto;
+                img {
+                    width: 270px; //width: 40%;
+                    height: 544px; //height: 20%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (max-width: 350px) {
+                    img {
+                        margin: 0 0 0 -10px;
+                    }
+                }
+            }
         }
     }
 }
 
-h1 {
-    color: @highlight;
+.openSourceContainer {
+    background: #F0652F;
     text-align: center;
+    padding: 15px;
+    .opHeadLine {
+        color: #333;
+    }
+    .btn-svg {
+        display: inline-block;
+        position: relative;
+        margin: 5px auto;
+        padding: 10px 15px;
+        border: 2px solid #fff;
+        color: #fff;
+        text-align: center;
+        border-radius: 10px;
+        width: 90%;
+    }
+    .svgIcon {
+        line-height: 40px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 40px;
+    }
+    .linkText {
+        line-height: 40px;
+        vertical-align: middle;
+        text-align: center;
+        padding-left: 10px;
+        font-size: 24px;
+    }
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: #fff;
+    }
 }
 
-a {
-    color: @links;
-}
+.support {
+    
+    
+   width: 100%;
+   height: 550px;
+     
 
-.description {
-    margin: 3em auto;
+    iframe {
+        
+        width: 100%;
+        height: 100%;
+    }
 }
-
-.button-holder {
-    text-align: center;
-}
-
-// .cta {
-//     .btn;
-//     .btn-lg;
-//     .button-variant(@background;
-//     @highlight;
-//     @highlight);
-// }
