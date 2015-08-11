@@ -1,8 +1,8 @@
 {
-  "name": "simple-gulp-template",
+  "name": "hackerNewsAppLP",
   "version": "1.0.0",
   "authors": [
-    "Jair Trejo <jair@jairtrejo.mx>"
+    "Vetri <vetri02@gmail.com>"
   ],
   "license": "MIT",
   "private": true,

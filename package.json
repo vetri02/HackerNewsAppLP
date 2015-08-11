@@ -1,12 +1,12 @@
 {
-  "name": "simple-gulp-template",
+  "name": "hackerNewsAppLP",
   "version": "1.0.0",
-  "description": "A very simple gulpjs template",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "build": "gulp"
   },
-  "author": "Jair Trejo <jair@jairtrejo.mx>",
+  "author": "Vetri <vetri02@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.12",
