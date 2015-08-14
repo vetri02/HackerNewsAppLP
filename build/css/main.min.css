@@ -10,6 +10,8 @@ body {
   margin: 0;
 }
 
+footer,
+header,
 nav,
 section {
   display: block;
@@ -64,7 +66,8 @@ input::-moz-focus-inner {
     content: " (" attr(href) ")";
   }
 
-  a[href^="#"]:after {
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: "";
   }
 
@@ -77,12 +80,14 @@ input::-moz-focus-inner {
   }
 
   p,
-  h2 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
 
-  h2 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 
@@ -92,7 +97,8 @@ input::-moz-focus-inner {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
@@ -100,7 +106,8 @@ h2 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -113,8 +120,17 @@ h2 {
   font-size: 30px;
 }
 
+h3 {
+  font-size: 24px;
+}
+
 p {
   margin: 0 0 10px;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .form-control::-moz-placeholder {
@@ -334,7 +350,7 @@ body {
 }
 
 .hnContainer {
-  background-image: url('/images/Mockup-Generated-by-Dunnnk (1)-min.jpg');
+  background-image: url('../images/handMockUp.jpg');
   background-size: cover;
   margin: 0 auto;
   width: 100%;
@@ -345,6 +361,13 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover !important;
+  background-color: #333;
+}
+
+@media (max-width: 350px) {
+  .hnContainer {
+    background-attachment: scroll !important;
+  }
 }
 
 .hnContainer .bgOverlay {
@@ -504,15 +527,46 @@ body {
 
 .openSourceContainer {
   background: #F0652F;
-  text-align: center;
-  padding: 15px;
+  padding: 25px;
+}
+
+.openSourceContainer li {
+  font-size: 18px;
 }
 
 .openSourceContainer .opHeadLine {
-  color: #333;
+  color: #fff;
+  text-align: center;
 }
 
-.openSourceContainer .btn-svg {
+@media (max-width: 768px) {
+  .openSourceContainer .opnImagBlock {
+    width: 100%;
+  }
+}
+
+.openSourceContainer .opnImagBlock img {
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .openSourceContainer .opnOtherBlock {
+    width: 100%;
+  }
+}
+
+.openSourceContainer .opnOtherBlock .opLinks {
+  padding-top: 20px;
+}
+
+.openSourceContainer .opnOtherBlock .appFeatures {
+  padding: 30px 10px;
+}
+
+.openSourceContainer .opnOtherBlock .btn-svg {
   display: inline-block;
   position: relative;
   margin: 5px auto;
@@ -521,38 +575,67 @@ body {
   color: #fff;
   text-align: center;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
 }
 
-.openSourceContainer .svgIcon {
+.openSourceContainer .opnOtherBlock .svgIcon {
   line-height: 40px;
   vertical-align: middle;
   display: inline-block;
   height: 40px;
 }
 
-.openSourceContainer .linkText {
+.openSourceContainer .opnOtherBlock .linkText {
   line-height: 40px;
   vertical-align: middle;
   text-align: center;
   padding-left: 10px;
-  font-size: 24px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-.openSourceContainer svg {
+@media (max-width: 400px) {
+  .openSourceContainer .opnOtherBlock .linkText {
+    font-size: 16px;
+  }
+}
+
+.openSourceContainer .opnOtherBlock svg {
   width: 40px;
   height: 40px;
   fill: #fff;
 }
 
-.support {
+.footerBlock {
+  padding: 10px;
+  margin: 0 auto;
   width: 100%;
-  height: 550px;
+  background: #333;
 }
 
-.support iframe {
-  width: 100%;
-  height: 100%;
+.footerBlock .twitterLink {
+  line-height: 0px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 32%;
+}
+
+.footerBlock .twitterLink svg {
+  display: inline-block;
+  height: 30px;
+}
+
+.footerBlock .navbar-link {
+  width: 32%;
+  text-align: center;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.footerBlock .bottomBrand {
+  width: 32%;
+  display: inline-block;
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.min.css.map */

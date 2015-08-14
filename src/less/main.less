@@ -23,7 +23,7 @@ body {
 }
 
 .hnContainer {
-    background-image: url('/images/Mockup-Generated-by-Dunnnk (1)-min.jpg');
+    background-image: url('../images/handMockUp.jpg');
     background-size: cover;
     margin: 0 auto;
     width: 100%;
@@ -34,6 +34,12 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover !important;
+    background-color: #333;
+
+    @media (max-width: 350px) {
+        background-attachment: scroll !important;
+    }
+
     .bgOverlay {
         background: #333;
         opacity: 0.5;
@@ -176,52 +182,115 @@ body {
 
 .openSourceContainer {
     background: #F0652F;
-    text-align: center;
-    padding: 15px;
-    .opHeadLine {
-        color: #333;
+    //text-align: center;
+    padding: 25px;
+    li {
+        font-size: 18px;
     }
-    .btn-svg {
-        display: inline-block;
-        position: relative;
-        margin: 5px auto;
-        padding: 10px 15px;
-        border: 2px solid #fff;
+    .opHeadLine {
         color: #fff;
         text-align: center;
-        border-radius: 10px;
-        width: 90%;
     }
-    .svgIcon {
-        line-height: 40px;
-        vertical-align: middle;
-        display: inline-block;
-        height: 40px;
+    .opnImagBlock {
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        img {
+            display: block;
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+        }
     }
-    .linkText {
-        line-height: 40px;
-        vertical-align: middle;
-        text-align: center;
-        padding-left: 10px;
-        font-size: 24px;
-    }
-    svg {
-        width: 40px;
-        height: 40px;
-        fill: #fff;
+    .opnOtherBlock {
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        .opLinks {
+            padding-top: 20px;
+        }
+        .appFeatures {
+            padding: 30px 10px;
+        }
+        .btn-svg {
+            display: inline-block;
+            position: relative;
+            margin: 5px auto;
+            padding: 10px 15px;
+            border: 2px solid #fff;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .svgIcon {
+            line-height: 40px;
+            vertical-align: middle;
+            display: inline-block;
+            height: 40px;
+        }
+        .linkText {
+            line-height: 40px;
+            vertical-align: middle;
+            text-align: center;
+            padding-left: 10px;
+            font-size: 18px;
+            text-decoration: none;
+
+            @media (max-width: 400px) {
+                font-size: 16px;
+            }
+        }
+        svg {
+            width: 40px;
+            height: 40px;
+            fill: #fff;
+        }
     }
 }
 
 .support {
-    
-    
-   width: 100%;
-   height: 550px;
-     
-
+    width: 100%;
+    height: 550px;
     iframe {
-        
         width: 100%;
         height: 100%;
+    }
+}
+
+.footerBlock {
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    background: #333;
+
+    //text-align: right;
+    
+    .twitterLink {
+        //text-align: left;
+        line-height: 0px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 32%;
+
+        svg {
+          display: inline-block;
+          height: 30px;
+
+          //margin: 0px auto;
+        }
+    }
+    
+    .navbar-link {
+        width: 32%;
+        text-align: center;
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    .bottomBrand {
+        width: 32%;
+        display: inline-block;
+        text-align: right;
     }
 }

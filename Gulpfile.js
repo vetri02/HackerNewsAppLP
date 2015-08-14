@@ -42,6 +42,10 @@ var config = {
         verbatim: {
             src: ["src/manifest.json", "src/favicon.png"],
             dest: "build"
+        },
+        downloadFiles: {
+            src: ["src/downloadFiles/**/*"],
+            dest: "build/downloadFiles"
         }
     }
 };
@@ -112,6 +116,11 @@ gulp.task("verbatim", function(){
         .pipe(gulp.dest(config.paths.verbatim.dest));
 });
 
+gulp.task("downloadFiles", function(){
+    gulp.src(config.paths.downloadFiles.src)
+        .pipe(gulp.dest(config.paths.downloadFiles.dest));
+});
+
 gulp.task("browser-sync", function() {
     browserSync({
         server: {
@@ -120,7 +129,7 @@ gulp.task("browser-sync", function() {
     });
 });
 
-gulp.task("build", ["bower", "html", "scripts", "css", "less", "images", "verbatim"]);
+gulp.task("build", ["bower", "html", "scripts", "css", "less", "images", "verbatim", "downloadFiles"]);
 
 gulp.task("default", ["build", "browser-sync"], function(){
     gulp.watch(config.paths.html.src, ["html", browserSync.reload]);
