@@ -13,7 +13,7 @@
   "overrides": {
     "bootstrap": {
       "main": [
-        "dist/fonts/**", "dist/js/bootstrap.min.js"
+        //"dist/js/bootstrap.min.js"
       ]
     }
   }

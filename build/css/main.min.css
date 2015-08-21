@@ -66,8 +66,7 @@ input::-moz-focus-inner {
     content: " (" attr(href) ")";
   }
 
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+  a[href^="#"]:after {
     content: "";
   }
 
@@ -517,6 +516,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 350px) {

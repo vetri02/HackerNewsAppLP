@@ -40,7 +40,7 @@ var config = {
             dest: "build/lib"
         },
         verbatim: {
-            src: ["src/manifest.json", "src/favicon.png"],
+            src: ["src/manifest.json", "src/favicon.png", "src/favicon.ico"],
             dest: "build"
         },
         downloadFiles: {
